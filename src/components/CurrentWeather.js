@@ -7,6 +7,7 @@ export const CurrentWeather = () => {
   const { date } = useContext(TimeContext);
   let temp = `${data[0]?.main.temp.toFixed(0)}°C`;
   const [day, setDay] = useState();
+  const [month, setMonth] = useState();
   console.log(data);
 
   useEffect(() => {
@@ -34,6 +35,48 @@ export const CurrentWeather = () => {
     }
   }, [date]);
 
+  useEffect(() => {
+    switch (date.getMonth()) {
+      case 0:
+        setMonth("Jan");
+        break;
+      case 1:
+        setMonth("Feb");
+        break;
+      case 2:
+        setMonth("Mar");
+        break;
+      case 3:
+        setMonth("Apr");
+        break;
+      case 4:
+        setMonth("May");
+        break;
+      case 5:
+        setMonth("June");
+        break;
+      case 6:
+        setMonth("July");
+        break;
+      case 7:
+        setMonth("Aug");
+        break;
+      case 8:
+        setMonth("Sept");
+        break;
+      case 9:
+        setMonth("Oct");
+        break;
+
+      case 10:
+        setMonth("Nov");
+        break;
+      case 11:
+        setMonth("Dec");
+        break;
+    }
+  }, [date]);
+
   return (
     <div className="current">
       <div className="bold temp">{temp}</div>
@@ -49,8 +92,8 @@ export const CurrentWeather = () => {
           </p>
           <p>
             <span>{day}, </span>
-            <span>{date.getDate()}.</span>
-            <span>{date.getMonth()}.</span>
+            <span>{date.getDate()} </span>
+            <span>{month} </span>
             <span>{date.getFullYear() - 2000}</span>
           </p>
         </div>
