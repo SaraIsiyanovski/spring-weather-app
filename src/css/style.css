@@ -1,0 +1,284 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.App{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.components{
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 2;
+}
+
+.img{
+    width: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bold{
+    font-weight: 500;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* left */
+
+.left{
+    width: 60%;
+    height: 100vh;
+    position: relative;
+}
+
+.current{
+    position: absolute;
+    bottom: 10%;
+    left:10%; 
+    width: 80%;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.579); 
+    display: flex;  
+    justify-content: space-around;
+    align-items: center;
+}
+
+.temp{
+    font-size: 60px;
+}
+
+.middle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+} 
+
+.city{
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.time{
+    font-size: 12px;
+    display: flex;
+    color: rgba(255, 255, 255, 0.834);
+}
+
+
+
+/* right */
+
+.right{
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.721);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.heading{
+    border-bottom: 1px solid white;
+}
+
+.another{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 82%;
+    min-height: 300px;
+    
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 82%;
+    height: 450px;
+}
+
+.info-we p{
+    margin: 25px 0;
+    font-weight: 100;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons-s{
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.649);
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.another-h{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.icon{
+    margin-left: 5px;
+    font-size: 30px;
+    padding:10px 10px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(71, 104, 107);
+}
+
+.icon:hover{
+    background-color: rgb(63, 91, 94);
+    cursor: pointer;
+}
+
+/* modal */
+
+.darkBack {
+    background-color: rgba(0, 0, 0, 0.604);
+    width: 100% !important;
+    height: 104vh !important;
+    border: 2px solid black;
+    z-index: 3;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+  }
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none !important;
+  }
+
+.modal {
+    width: 360px;
+    height: 600px;
+    background: white;
+    color: black;
+    z-index: 10;
+    border: none !important;
+    padding: 20px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+  }
+
+  .x-div{
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+  }
+
+  .btn{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.858);
+    border: none;
+    padding: 8px 10px;
+    margin-top: 20px;
+  }
+
+  .btn:hover{
+    cursor: pointer;
+  }
+
+  /* search */
+
+  .cities{
+    overflow-y: scroll;
+    height: 450px;
+  }
+
+  .city-s{
+    margin: 5px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.955);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.329);
+    padding: 8px 0;
+  }
+
+  .city-s:hover{
+    cursor: pointer;
+  }
+
+  .search-i{
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 5px;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  /* media queries */
+
+  @media screen and (max-width:890px){
+    .current{
+        flex-direction: column;
+        height: 210px;
+        
+    }
+  }
+
+  @media screen and (max-width:550px){
+    .App{
+        overflow: auto;
+    }
+    .components{
+        flex-direction: column;
+    }
+    .right{
+        min-height: 120vh;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .left{
+        width: 100%;
+        height: 70vh;
+    }
+
+
+    .city{
+        text-align: center;
+    }
+
+
+    .img{
+        height: 190vh;
+    }
+
+    .current{
+        bottom: 30%;
+    }
+  }
+
+ 
