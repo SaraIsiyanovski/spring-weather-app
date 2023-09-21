@@ -11,7 +11,7 @@ export const CurrentWeather = () => {
   const [month, setMonth] = useState();
 
   const handleClick = () => {
-    setFirstTemp((temp * 9) / 5 + 32);
+    setFirstTemp(((temp * 9) / 5 + 32).toFIxed(0));
     setUnit("°F");
   };
 
